@@ -9,9 +9,6 @@ function wordStat(str) {
 
     return str.split(" ")
         .filter(item => item.length > 0)
-        .map(function (word) {
-            return { word: word, sum: sumCodeOfSymb(word) }
-        });
+        .map(word => ({ word: word, sum: sumCodeOfSymb(word) })
+        );
 }
-
-// console.log(wordStat(" ".repeat(4)));

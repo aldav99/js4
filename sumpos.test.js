@@ -14,15 +14,15 @@ describe("sumpos", function () {
     describe("Проверка на не корректных данных", function () {
 
         it("Элемент массива - строка", function () {
-            assert.equal(sumOfPositive([-91, "-93", -45, 67, 96, 40, -34, 96, -42, 58]), "invalid");
+            assert.equal(sumOfPositive([-91, "-93", -45, 67, 96, 40, -34, 96, -42, 58]), "bad input");
         });
 
         it("Элемент массива - объект", function () {
-            assert.equal(sumOfPositive([96, { count: 5, sum: 357, }, 58]), "invalid");
+            assert.equal(sumOfPositive([96, { count: 5, sum: 357, }, 58]), "bad input");
         });
 
         it("Элемент массива - массив", function () {
-            assert.equal(sumOfPositive([-91, [-45, 67], -45, 67, 96, 40, -34, 96, -42, 58]), "invalid");
+            assert.equal(sumOfPositive([-91, [-45, 67], -45, 67, 96, 40, -34, 96, -42, 58]), "bad input");
         });
     });
 
